@@ -5,3 +5,8 @@
 /bazel-testlogs
 /bazel-tf
 /bazel-syntaxnet
+.idea/
+glib_files/
+*.pyc
+*.*~
+
