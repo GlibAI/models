@@ -4,6 +4,7 @@ import json
 import cherrypy, time
 import numpy as np
 import glib
+import netifaces as ni
 
 
 class Root:
@@ -34,7 +35,8 @@ class Root:
 
 
 def main():
-    cherrypy.config.update({'server.socket_host': '192.168.1.35',
+    ip = ni.ifaddresses('eth0')[2][0]['addr']
+    cherrypy.config.update({'server.socket_host': ip,
                             'server.socket_port': 7204,
                             'server.thread_pool': 30})
     conf = {}
