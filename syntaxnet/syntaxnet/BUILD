@@ -3,7 +3,7 @@
 
 package(
     default_visibility = [
-        "//visibility:private",
+        "//visibility:public",
     ],
     features = ["-layering_check"],
 )
