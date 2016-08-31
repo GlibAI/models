@@ -10,3 +10,4 @@ glib_files/
 *.pyc
 *.*~
 *~
+tensorflow/
