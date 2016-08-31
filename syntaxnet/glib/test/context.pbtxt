@@ -1,0 +1,56 @@
+input {
+  name: "word-map"
+  record_format: ""
+  Part {
+    file_pattern: "/home/mohit/glib-tensorflow/models/syntaxnet/glib/test/word-map"
+  }
+}
+input {
+  name: "lcword-map"
+  record_format: ""
+  Part {
+    file_pattern: "/home/mohit/glib-tensorflow/models/syntaxnet/glib/test/lcword-map"
+  }
+}
+input {
+  name: "tag-map"
+  record_format: ""
+  Part {
+    file_pattern: "/home/mohit/glib-tensorflow/models/syntaxnet/glib/test/tag-map"
+  }
+}
+input {
+  name: "category-map"
+  record_format: ""
+  Part {
+    file_pattern: "/home/mohit/glib-tensorflow/models/syntaxnet/glib/test/category-map"
+  }
+}
+input {
+  name: "label-map"
+  record_format: ""
+  Part {
+    file_pattern: "/home/mohit/glib-tensorflow/models/syntaxnet/glib/test/label-map"
+  }
+}
+input {
+  name: "prefix-table"
+  record_format: ""
+  Part {
+    file_pattern: "/home/mohit/glib-tensorflow/models/syntaxnet/glib/test/prefix-table"
+  }
+}
+input {
+  name: "suffix-table"
+  record_format: ""
+  Part {
+    file_pattern: "/home/mohit/glib-tensorflow/models/syntaxnet/glib/test/suffix-table"
+  }
+}
+input {
+  name: "tag-to-category"
+  record_format: ""
+  Part {
+    file_pattern: "/home/mohit/glib-tensorflow/models/syntaxnet/glib/test/tag-to-category"
+  }
+}

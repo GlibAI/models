@@ -55,3 +55,31 @@ py_binary(
         ":glib",
     ],
 )
+
+py_binary(
+    name = "input_test",
+    srcs = ["input_test.py"],
+    deps = [
+        "//syntaxnet:structured_graph_builder",
+        "//syntaxnet:sentence_py_pb2",
+        "//syntaxnet:task_spec_py_pb2",
+    ],
+)
+
+py_library(
+    name = "glib_v2",
+    srcs = ["glib_v2.py"],
+    deps = [
+        "//syntaxnet:structured_graph_builder",
+        "//syntaxnet:sentence_py_pb2",
+        "//syntaxnet:task_spec_py_pb2",
+    ],
+)
+
+py_binary(
+    name = "server_v2",
+    srcs = ["server_v2.py"],
+    deps = [
+        ":glib_v2",
+    ],
+)

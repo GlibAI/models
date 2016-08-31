@@ -72,6 +72,7 @@ arg_prefix: prefix for context parameters.
 )doc");
 
 REGISTER_OP("BeamParseReader")
+    .Input("documents: string")
     .Output("features: feature_size * string")
     .Output("beam_state: int64")
     .Output("num_epochs: int32")
@@ -84,6 +85,7 @@ REGISTER_OP("BeamParseReader")
     .Attr("arg_prefix: string='brain_parser'")
     .Attr("continue_until_all_final: bool=false")
     .Attr("always_start_new_sentences: bool=false")
+    .Attr("documents_from_input: bool=false")
     .SetIsStateful()
     .Doc(R"doc(
 Reads sentences and creates a beam parser.
@@ -229,11 +231,13 @@ task_context: file path at which to read the task context.
 )doc");
 
 REGISTER_OP("DocumentSource")
+    .Input("text: string")
     .Output("documents: string")
     .Output("last: bool")
     .Attr("task_context: string")
     .Attr("corpus_name: string='documents'")
     .Attr("batch_size: int")
+    .Attr("documents_from_input: bool=false")
     .SetIsStateful()
     .Doc(R"doc(
 Reads documents from documents_path and outputs them.
